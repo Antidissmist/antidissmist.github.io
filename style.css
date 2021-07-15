@@ -2,11 +2,42 @@
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #222034;
+  color: #cbdbfc;
+
+  image-rendering: pixelated;
 }
 
 
 
 
 .things {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  padding: 10px;
+
+  background-color: #45283c;
   text-align: center;
+}
+#thingbox {
+  border-radius: 20px;
+}
+
+img {
+  draggable: false;
+  user-select: none;
+  margin: 15px;
+}
+a img {
+  image-rendering: auto;
+}
+
+
+
+.tilt {
+  transform: rotate(0deg);
+}
+.tilt:hover {
+  transform: rotate(-8deg);
 }
