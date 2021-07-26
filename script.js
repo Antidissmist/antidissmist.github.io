@@ -43,6 +43,8 @@ function findmodal(el) {
   return found;
 }
 
+console.log("hello");
+
 
 //loading bar
 la = document.getElementById("loading");
