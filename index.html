@@ -2,21 +2,102 @@
 <html>
   <head>
     <title>Antidissmist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body onload="finishLoad();">
 
-    <div class="things" id="thingbox">
+    <div id="loading">
+      <img src="/files/loading.gif" id="loadgif" draggable="false"/>
+    </div>
+
+    <div class="things top">
       <h3>hi</h3>
-      <img src="/files/pfp.gif" draggable="false" ondragstart="return false;"><br>
-      <img src="/files/name.gif" draggable="false" ondragstart="return false;"><br>
+      <img src="/files/pfp.gif" draggable="false"><br>
+      <img src="/files/name.gif" draggable="false"><br>
 
-      <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" ondragstart="return false;"></a>
-      <a href="https://www.deviantart.com/nimasisdtist"><img src="/files/da.png" class="tilt" ondragstart="return false;"></a>
+      <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" draggable="false"></a>
+      <a href="https://www.deviantart.com/nimasisdtist"><img src="/files/da.png" class="tilt" draggable="false"></a>
 
     </div>
 
+    <div class="things">
+      <div class="artgrid">
 
-    <!--<script src="script.js"></script>-->
+
+        <div class="artbox">
+          <img src="/art/yellow.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/yellow.png" class="imgbig" draggable="false">
+            <p>(2021) A recent doodle drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
+          </div> 
+        </div>
+
+        <div class="artbox">
+          <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/voxeltower.png" class="imgbig" draggable="false">
+            <p>(2020) Made in <a href="https://ephtracy.github.io/">MagicaVoxel</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox large">
+          <img src="/art/orangeboxes.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/orangeboxes.png" class="imgbig" draggable="false">
+            <p>(2021) Drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox">
+          <img src="/art/spacetop.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal zoom">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/spacefull.png" class="imgbig" onclick="togglezoom(this);" draggable="false">
+            <p>(2020) Space Tower Headquarters, drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
+          </div> 
+        </div>
+
+
+
+        <div class="artbox">
+          <img src="/art/shack.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/shack.gif" class="imgbig" draggable="false">
+            <p>(2020) Made in <a href="https://www.aseprite.org/">Aseprite</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox large">
+          <img src="/art/solar.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/art/solar.gif" class="imgbig" draggable="false">
+            <p>(2020) Solar Sunset Cruise, Drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
+          </div> 
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+    <div class="bottom">
+      <a href="https://github.com/Antidissmist/antidissmist.github.io">
+        Thanks GitHub Pages
+      </a>
+    </div>
+
+
+    <script src="script.js"></script>
   </body>
 </html>

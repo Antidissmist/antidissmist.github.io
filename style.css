@@ -4,30 +4,127 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #222034;
   color: #cbdbfc;
-
-  image-rendering: pixelated;
+}
+p {
+  color: #ffffff;
+  margin: 0;
+}
+p a {
+  color: #ffd541;
 }
 
 
 
 
 .things {
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: auto;
   margin: auto;
+  margin-bottom: 20px;
   padding: 10px;
 
   background-color: #45283c;
+  border-radius: 10px;
   text-align: center;
 }
-#thingbox {
-  border-radius: 20px;
+.things.top {
+  width: 500px;
 }
 
+
+.bottom {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.bottom a {
+  color: #ffd541;
+}
+
+.artgrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 6px;
+}
+
+
+.artbox {
+  margin: 0px;
+}
+.artbox.large {
+  grid-column: auto / span 2;
+  grid-row: auto / span 2;
+}
+.artbox img.imgbox {
+  width: 345px;
+  margin: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.artbox.large img.imgbox {
+  width: 100%;
+}
+img.imgbox:hover {
+  transform: scale(0.98);
+  transition: transform 0.1s;
+}
+
+
+
+
+.modal {
+  display: none;
+  z-index: 1;
+  margin: auto;
+  padding: 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow-y: scroll;
+}
+.modal p {
+  margin-bottom: 50px;
+}
+.modal.open {
+  display: block;
+}
+.modal.zoom.open img.imgbig {
+  cursor: zoom-in;
+}
+.modal.zoom.open.zoomed img.imgbig {
+  cursor: zoom-out;
+}
+
+
+.modal .imgbig {
+  margin: 0;
+  max-width: 80%;
+  max-height: 80%;
+  border: 2px solid white;
+  overflow-y: scroll;
+}
+.modal.zoomed .imgbig {
+  max-width: 90%;
+  max-height: 300%;
+}
+.modal .modal_exit {
+  cursor: pointer;
+  margin: auto;
+  width: fit-content;
+}
+
+
+
+
 img {
-  draggable: false;
   user-select: none;
   margin: 15px;
+  image-rendering: pixelated;
 }
 a img {
   image-rendering: auto;
@@ -40,4 +137,29 @@ a img {
 }
 .tilt:hover {
   transform: rotate(-8deg);
+}
+.noscroll {
+  overflow: hidden;
+}
+.invis {
+  visibility: hidden;
+}
+
+
+#loading {
+  z-index: 10;
+  margin: 0;
+  left: 0;
+  top: 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.23);
+}
+
+#loadgif {
+  position: fixed;
+  top: 30%;
+  margin: auto;
 }
