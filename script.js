@@ -46,8 +46,3 @@ function findmodal(el) {
 console.log("hello");
 
 
-//loading bar
-la = document.getElementById("loading");
-function finishLoad() {
-  la.style.display = "none";
-}
