@@ -40,7 +40,8 @@ ul.whatsnew {
   border: 3px solid var(--c_dark);
   border-radius: 20px;
   font-size: 14pt;
-  list-style: circle;
+  list-style-type: circle;
+  list-style-position: outside;
 }
 li.posttitle {
   font-size: 16pt;
