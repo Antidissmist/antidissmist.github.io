@@ -1,9 +1,21 @@
 
 
+:root {
+  --c_dark: #242234;
+  --c_bg: #221c1a;
+}
+
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #222034;
+
+  background-image: url(files/pagebg.png);
+  background-attachment: fixed;
+  background-color: var(--c_bg);
+  
   color: #cbdbfc;
+  margin: 0;
+  overflow-x: hidden;
 }
 p {
   color: #ffffff;
@@ -16,19 +28,41 @@ p a {
 
 
 
+
 .things {
   width: 700px;
   height: auto;
   margin: auto;
-  margin-bottom: 20px;
   padding: 10px;
 
-  background-color: #45283c;
-  border-radius: 10px;
+  background-color: var(--c_dark);
   text-align: center;
 }
-.things.top {
-  width: 500px;
+
+.coolshape {
+  margin: auto;
+  width: 720px;
+  height: 100px;
+  display: block;
+
+  fill: var(--c_dark);
+}
+
+
+.greetingbox {
+  height: 0px;
+  margin: 0px;
+}
+.greeting {
+  text-align: left;
+  margin: 0px;
+  position: relative;
+  top: 53px;
+  left: 10px;
+  width: 150px;
+}
+.noselect {
+  user-select: none;
 }
 
 
@@ -38,6 +72,9 @@ p a {
 }
 .bottom a {
   color: #ffd541;
+}
+.boxtilt {
+  transform: rotate(352deg);
 }
 
 .artgrid {
@@ -50,6 +87,9 @@ p a {
 
 .artbox {
   margin: 0px;
+}
+.artbox.offset {
+  height: 0;
 }
 .artbox.large {
   grid-column: auto / span 2;

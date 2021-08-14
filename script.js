@@ -43,6 +43,36 @@ function findmodal(el) {
   return found;
 }
 
+
+
+greetings = [
+  "hello! 👋",
+  "hey whats up 👋",
+  "hey 👋",
+
+  "🌮",
+  "🍐",
+  "🌍",
+  "🌒",
+
+  "🧱",
+  "🧰",
+  "⚙️",
+  
+
+];
+
+greeting = document.getElementById("greeting");
+gclicks = 0;
+topgreet = 3; //first
+function greet() {
+  var num = Math.floor(Math.random()*(Math.min(greetings.length,topgreet)));
+  greeting.innerHTML = greetings[num];
+  gclicks++
+  topgreet = greetings.length;
+}
+greet();
+
 console.log("hello");
 
 

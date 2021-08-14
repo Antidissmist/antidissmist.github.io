@@ -7,15 +7,27 @@
   </head>
   <body>
 
-    <div class="things top">
-      <h3>hi</h3>
+    <div class="things">
       <img src="/files/pfp.gif" draggable="false"><br>
       <img src="/files/name.gif" draggable="false"><br>
 
       <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" draggable="false"></a>
       <a href="https://www.deviantart.com/nimasisdtist"><img src="/files/da.png" class="tilt" draggable="false"></a>
 
+      <div class="greetingbox">
+        <h3 id="greeting" class="greeting boxtilt noselect" onclick="greet();"></h3>
+      </div>
+
     </div>
+
+    <svg class="coolshape">
+      <path d="M0 0 L0 100 L720 0 Z" />
+    </svg>
+    <svg class="coolshape">
+      <path d="M720 0 L0 100 L720 100 Z"></path>
+    </svg>
+
+    
 
     <div class="things">
       <div class="artgrid">
@@ -30,8 +42,8 @@
           </div> 
         </div>
 
-        <div class="artbox">
-          <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+        <div class="artbox offset">
+          <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false" style="position: relative; top: -30px;"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
             <img src="/art/voxeltower.png" class="imgbig" draggable="false">
@@ -82,17 +94,33 @@
 
 
 
+    <!-- clutter
+    <div style="width:0px;height:0px;"><img src="files/filler.png" style="margin: 0;width: 720px; position: relative;left:-10px;top:-10px;" draggable="false"></div>
+    -->
+
 
 
       </div>
     </div>
+    <svg class="coolshape">
+      <path d="M0 0 L0 100 L720 0 Z" />
+    </svg>
 
-    <div class="bottom">
+
+    <div style="height:0;">
+      <svg class="coolshape" style="width: 360px;height:150px;position: relative;top: -27px;z-index: -1;">
+        <path d="M0 50 L0 130 L360 80 L360 0 Z"></path>
+      </svg>
+    </div>
+
+
+    <div class="bottom boxtilt">
+      <br>
       <a href="https://github.com/Antidissmist/antidissmist.github.io">
         Thanks GitHub Pages
       </a>
       <p>
-        Let me know if my page breaks  
+        Let me know if my page breaks 🔧
       </p>
     </div>
 
