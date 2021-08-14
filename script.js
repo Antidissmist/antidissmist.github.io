@@ -44,10 +44,10 @@ function findmodal(el) {
 }
 
 
-
+topgreet = 3;
 greetings = [
   "hello! 👋",
-  "hey whats up 👋",
+  "hi 👋",
   "hey 👋",
 
   "🌮",
@@ -62,9 +62,9 @@ greetings = [
 
 ];
 
+
 greeting = document.getElementById("greeting");
 gclicks = 0;
-topgreet = 3; //first
 function greet() {
   var num = Math.floor(Math.random()*(Math.min(greetings.length,topgreet)));
   greeting.innerHTML = greetings[num];

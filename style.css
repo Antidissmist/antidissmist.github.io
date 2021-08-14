@@ -21,10 +21,36 @@ p {
   color: #ffffff;
   margin: 0;
 }
-p a {
+p a, li a {
   color: #ffd541;
 }
 
+
+
+
+ul {
+  list-style: none;
+}
+ul.whatsnew {
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  width: 360px;
+  background-color: var(--c_bg);
+  border: 3px solid var(--c_dark);
+  border-radius: 20px;
+  font-size: 14pt;
+  list-style: circle;
+}
+li.posttitle {
+  font-size: 16pt;
+  color: white;
+  list-style: none;
+}
+ul.whatsnew li + li {
+  border-top: 3px solid var(--c_dark);
+  padding: 3px;
+}
 
 
 
@@ -46,6 +72,11 @@ p a {
   display: block;
 
   fill: var(--c_dark);
+}
+
+.centerbox {
+  width: 720px;
+  margin: auto;
 }
 
 
