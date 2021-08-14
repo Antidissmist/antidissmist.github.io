@@ -40,8 +40,7 @@ ul.whatsnew {
   border: 3px solid var(--c_dark);
   border-radius: 20px;
   font-size: 14pt;
-  list-style-type: circle;
-  list-style-position: outside;
+  box-shadow: #000000b3 0 0 20px;
 }
 li.posttitle {
   font-size: 16pt;
@@ -51,6 +50,7 @@ li.posttitle {
 ul.whatsnew li + li {
   border-top: 3px solid var(--c_dark);
   padding: 3px;
+  list-style: circle outside;
 }
 
 
@@ -63,7 +63,15 @@ ul.whatsnew li + li {
   padding: 10px;
 
   background-color: var(--c_dark);
+  background-image: url(files/pagebg2.png);
+  background-attachment: fixed;
   text-align: center;
+}
+
+.pfp {
+  border-radius: 50%;
+  box-shadow: var(--c_bg) 0px 0px 40px;
+  height: 142px;
 }
 
 .coolshape {
@@ -73,6 +81,7 @@ ul.whatsnew li + li {
   display: block;
 
   fill: var(--c_dark);
+  fill: url(#coolshape-pattern);
 }
 
 .centerbox {

@@ -1,6 +1,20 @@
 
 
 
+//test
+pattern = document.getElementById("coolshape-pattern");
+function scrollbg() {
+  pattern.setAttribute("y",(window.scrollY+3).toString());
+}
+topthings = document.querySelector(".things");
+function centerbg() {
+  pattern.setAttribute("x",( -topthings.offsetLeft ).toString());
+}
+
+scrollbg();
+centerbg();
+
+
 
 function openimg(el) {
   var f = findmodal(el);

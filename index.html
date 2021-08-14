@@ -4,11 +4,24 @@
     <title>Antidissmist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+    
   </head>
-  <body>
+  <body onscroll="scrollbg();" onresize="centerbg();">
+
+    <svg style="position:fixed;">
+      <defs>
+        <pattern id="coolshape-pattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+          <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+        </pattern>
+      </defs>
+    </svg>
+
+
 
     <div class="things">
-      <img src="/files/pfp.gif" draggable="false"><br>
+      <img src="/files/pfp_static.png" class="pfp" draggable="false"><br>
       <img src="/files/name.gif" draggable="false"><br>
 
       <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" draggable="false"></a>
@@ -20,8 +33,9 @@
 
     </div>
 
+
     <svg class="coolshape">
-      <path d="M0 0 L0 100 L720 0 Z" />
+      <path d="M0 0 L0 100 L720 0 Z"></path>
     </svg>
 
 
@@ -118,7 +132,7 @@
 
     <div class="centerbox">
       <div style="height: 0;">
-        <svg class="coolshape" style="width: 360px;height:150px;position: relative;top: -27px;z-index: -1;">
+        <svg class="coolshape" style="width: 360px;height:135px;position: relative;top: -27px;z-index: -1;">
           <path d="M0 50 L0 130 L360 80 L360 0 Z"></path>
         </svg>
       </div>
@@ -132,6 +146,9 @@
         </p>
       </div>
     </div>
+
+
+    <br><br>
 
 
     <script src="script.js"></script>
