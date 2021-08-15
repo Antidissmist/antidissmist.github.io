@@ -3,8 +3,7 @@
   <head>
     <title>Antidissmist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
+    <link href="/style.css" rel="stylesheet" type="text/css" />
 
     
   </head>
@@ -20,6 +19,21 @@
 
 
 
+
+    <div id="ripoffware" class="modal">
+      <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+      <div style="margin: auto;margin-bottom: 140px;width: fit-content;">
+        <div style="height: 85px;">
+          <img src="/files/ripoffware.png" class="imgbig_game" draggable="false" style="left: 0;">
+        </div>
+        <canvas id="minigame" width="256" height="256" style="left: -13px;" onmousemove="game_mouseover();" oncontextmenu="return false;"></canvas>
+      </div>
+      <br>
+      <h3>Z X  ↔️ ↕️</h3>
+    </div>
+
+
+
     <div class="things">
       <img src="/files/pfp_static.png" class="pfp" draggable="false"><br>
       <img src="/files/name.gif" draggable="false"><br>
@@ -27,8 +41,13 @@
       <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" draggable="false"></a>
       <a href="https://www.deviantart.com/nimasisdtist"><img src="/files/da.png" class="tilt" draggable="false"></a>
 
-      <div class="greetingbox">
+      
+
+      <div class="extrasbox">
         <h3 id="greeting" class="greeting boxtilt noselect" onclick="greet();"></h3>
+
+        <img src="/files/game_button.png" class="minibutton tilt" style="position: relative;left: 46.5%;top: -94px;" onclick="open_game();" draggable="false">
+
       </div>
 
     </div>
@@ -151,6 +170,7 @@
     <br><br>
 
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
+    <script src="/general.js"></script>
   </body>
 </html>
