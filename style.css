@@ -25,6 +25,10 @@ p a, li a {
   color: #ffd541;
 }
 
+.thingsbg {
+  background-color: white;
+}
+
 
 
 
@@ -52,6 +56,9 @@ ul.whatsnew li + li {
   padding: 3px;
   list-style: circle outside;
 }
+ul.whatsnew li:hover {
+  font-weight: bold;
+}
 
 
 
@@ -63,10 +70,42 @@ ul.whatsnew li + li {
   padding: 10px;
 
   background-color: var(--c_dark);
-  background-image: url(files/pagebg2.png);
+  background-image: url("/files/pagebg2.png");
   background-attachment: fixed;
   text-align: center;
 }
+.things.cooler {
+  border-radius: 29px;
+  width: fit-content;
+  padding: 20px;
+  margin-top: 20px;
+
+  border: 0px #f6d43f dotted;
+  transition: border 0.2s;
+}
+.things.cooler:hover {
+  border: 4px #f6d43f dotted;
+  transition: border 0.2s;
+}
+
+
+.button1 {
+  border: 0;
+  color: black;
+  background-color: #295c42;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: #141013 0px 5px;
+  font-size: 16pt;
+}
+.button1:hover {
+  background-color: #337251;
+}
+.button1:active {
+  transform: translate(0px, 5px);
+  box-shadow: none;
+}
+
 
 .pfp {
   border-radius: 50%;
@@ -81,23 +120,13 @@ ul.whatsnew li + li {
   display: block;
 
   fill: var(--c_dark);
-  fill: url(#coolshape-pattern);
 }
 
 .centerbox {
   width: 720px;
   margin: auto;
 }
-.backbutton {
-  height: 42px;
-  margin: 0;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-.thingspageimg {
-  max-width: 45%;
-}
+
 
 
 .extrasbox {
@@ -140,9 +169,7 @@ ul.whatsnew li + li {
 
 .artbox {
   margin: 0px;
-}
-.artbox.offset {
-  height: 0;
+  position: relative;
 }
 .artbox.large {
   grid-column: auto / span 2;
@@ -161,6 +188,78 @@ ul.whatsnew li + li {
 img.imgbox:hover {
   transform: scale(0.98);
   transition: transform 0.1s;
+}
+.artbox .artlabel {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  text-shadow: 0px 0px 10px black;
+  color: white;
+  z-index: 1;
+
+  font-size: 17pt;
+  text-align: left;
+  left: 17px;
+  bottom: 45px;
+}
+.artbox:hover .artlabel {
+  visibility: visible;
+}
+.imgbox.invis {
+  visibility: hidden;
+}
+.artbox.open .artlabel {
+  visibility: hidden;
+}
+
+
+
+.backbutton {
+  height: 42px;
+  margin: 0;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.thingspageimg {
+  max-width: 45%;
+}
+.h1title {
+  font-size: 72pt;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.logotitle {
+  color: #f6d43f;
+  text-shadow: #295c42 6px 6px, #141013 12px 12px;
+  transition: text-shadow 0.2s;
+}
+.logotitle:hover {
+  text-shadow: #27547d 8px 8px, #242234 16px 16px;
+  transition: text-shadow 0.2s;
+}
+
+.funheading:hover {
+  text-shadow: #f6d43f 0px 0px 0px;
+  transition: text-shadow 0.2s;
+}
+.funheading {
+  text-shadow: #f6d43f 0px 0px 12px;
+  transition: text-shadow 0.2s;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+
+.namegif {
+  filter: drop-shadow(4px 4px 0px #295c42) drop-shadow(4px 4px 0px #141013);
+  transition: filter 0.2s;
+}
+.namegif:hover {
+  filter: drop-shadow(-4px 4px 0px #27547d) drop-shadow(-4px 4px 0px #141013);
+  transition: filter 0.2s;
 }
 
 
@@ -254,17 +353,20 @@ a img {
 
 
 
-.tilt {
-  transform: rotate(0deg);
-}
+
 .tilt:hover {
-  transform: rotate(-8deg);
+  filter: drop-shadow(0px 4px 0px #141013);
+  transform: translate(0px, -4px);
 }
 .noscroll {
   overflow: hidden;
 }
 .invis {
   visibility: hidden;
+}
+.nobg {
+  background-image: none;
+  background-color: transparent;
 }
 
 

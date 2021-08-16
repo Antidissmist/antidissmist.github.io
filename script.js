@@ -8,6 +8,7 @@ function openimg(el) {
     document.body.classList.add("noscroll");
   }
   el.classList.add("invis");
+  el.parentElement.classList.add("open");
 }
 function openmodalid(eid) {
   el = document.getElementById(eid);
@@ -30,6 +31,8 @@ function exitmodal(el) {
   if (opened != null) { //uh oh
     opened.classList.remove("invis");
   }
+  el.parentElement.parentElement.classList.remove("open");
+  
 
   close_game();
 }
@@ -55,6 +58,7 @@ function findmodal(el) {
   }
   return found;
 }
+
 
 
 
@@ -125,7 +129,6 @@ function game_enter() {
 
 function unpress() {
   keys.fill(0);
-  console.log("unpress");
 }
 function game_mouseover() {
   if (game_open) {

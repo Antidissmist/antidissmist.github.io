@@ -3,21 +3,12 @@
   <head>
     <title>Antidissmist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <link href="/style.css" rel="stylesheet" type="text/css" />
 
     
   </head>
-  <body onscroll="scrollbg();" onresize="centerbg();">
-
-    <svg style="position:fixed;">
-      <defs>
-        <pattern id="coolshape-pattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
-          <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
-        </pattern>
-      </defs>
-    </svg>
-
-
+  <body>
 
 
     <div id="ripoffware" class="modal">
@@ -36,7 +27,9 @@
 
     <div class="things">
       <img src="/files/pfp_static.png" class="pfp" draggable="false"><br>
-      <img src="/files/name.gif" draggable="false"><br>
+      <!--<img src="/files/name.gif" draggable="false"><br>-->
+      <img src="/files/name_nobg.gif" class="namegif" draggable="false"><br>
+      <!-- #f6d43f #295c42 #141013 -->
 
       <a href="https://antidissmist.itch.io/"><img src="/files/itch.png" class="tilt" draggable="false"></a>
       <a href="https://www.deviantart.com/nimasisdtist"><img src="/files/da.png" class="tilt" draggable="false"></a>
@@ -46,7 +39,9 @@
       <div class="extrasbox">
         <h3 id="greeting" class="greeting boxtilt noselect" onclick="greet();"></h3>
 
+        <!-- beep boop
         <img src="/files/game_button.png" class="minibutton tilt" style="position: relative;left: 46.5%;top: -94px;" onclick="open_game();" draggable="false">
+        -->
 
       </div>
 
@@ -54,7 +49,12 @@
 
 
     <svg class="coolshape">
-      <path d="M0 0 L0 100 L720 0 Z"></path>
+      <defs>
+        <pattern id="pattern1" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+          <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+        </pattern>
+      </defs>
+      <path d="M0 0 L0 100 L720 0 Z" fill="url(#pattern1)"></path>
     </svg>
 
 
@@ -71,7 +71,12 @@
 
 
     <svg class="coolshape">
-      <path d="M720 0 L0 100 L720 100 Z"></path>
+      <defs>
+        <pattern id="pattern2" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+          <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+        </pattern>
+      </defs>
+      <path d="M720 0 L0 100 L720 100 Z" fill="url(#pattern2)"></path>
     </svg>
 
     
@@ -81,6 +86,7 @@
 
 
         <div class="artbox">
+          <div class="artlabel">doodle</div>
           <img src="/art/yellow.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -89,7 +95,8 @@
           </div> 
         </div>
 
-        <div class="artbox offset">
+        <div class="artbox" style="height: 317px;">
+          <div class="artlabel">Voxel tower</div>
           <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false" style="position: relative; top: -30px;"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -100,6 +107,7 @@
 
 
         <div class="artbox large">
+          <div class="artlabel">doodle</div>
           <img src="/art/orangeboxes.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -110,6 +118,7 @@
 
 
         <div class="artbox">
+          <div class="artlabel">Space Tower Headquarters</div>
           <img src="/art/spacetop.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal zoom">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -121,6 +130,7 @@
 
 
         <div class="artbox">
+          <div class="artlabel">Valley View Shack</div>
           <img src="/art/shack.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -131,6 +141,7 @@
 
 
         <div class="artbox large">
+          <div class="artlabel">Solar Sunset Cruise</div>
           <img src="/art/solar.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
@@ -145,14 +156,24 @@
       </div>
     </div>
     <svg class="coolshape">
-      <path d="M0 0 L0 100 L720 0 Z" />
+      <defs>
+        <pattern id="pattern3" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+          <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+        </pattern>
+      </defs>
+      <path d="M0 0 L0 100 L720 0 Z" fill="url(#pattern3)">
     </svg>
 
 
     <div class="centerbox">
       <div style="height: 0;">
         <svg class="coolshape" style="width: 360px;height:135px;position: relative;top: -27px;z-index: -1;">
-          <path d="M0 50 L0 130 L360 80 L360 0 Z"></path>
+          <defs>
+            <pattern id="pattern4" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+              <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+            </pattern>
+          </defs>
+          <path d="M0 50 L0 130 L360 80 L360 0 Z" fill="url(#pattern4)"></path>
         </svg>
       </div>
       <div class="bottom boxtilt">

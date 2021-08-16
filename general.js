@@ -3,20 +3,17 @@
 
 
 //things grid
-pattern = document.getElementById("coolshape-pattern");
+patterns = document.querySelectorAll(".coolpattern");
 function scrollbg() {
-  if (pattern != null) {
-    pattern.setAttribute("y",(window.scrollY+3).toString());
-  }
-}
-topthings = document.querySelector(".things");
-function centerbg() {
-  if (pattern != null && topthings != null) {
-    pattern.setAttribute("x",( -topthings.offsetLeft ).toString());
+  for (let val of patterns) {
+    let par = val.parentNode.parentNode.getBoundingClientRect();
+    val.setAttribute("y",-par.top);
+    val.setAttribute("x",-par.left);
   }
 }
 scrollbg();
-centerbg();
+document.addEventListener("scroll", scrollbg);
+document.addEventListener("resize", scrollbg);
 
 
 
@@ -24,6 +21,5 @@ centerbg();
 function homepage() {
   window.location.href = window.location.origin;
 }
-
 
 
