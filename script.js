@@ -62,7 +62,31 @@ function findmodal(el) {
 
 
 
+const alltabs = document.querySelectorAll(".bigtab h3");
+const contentsections = document.querySelectorAll(".contentsection");
+function clicktab(el) {
+  if (!el.classList.contains("selected")) {
+    alltabs.forEach(function(tb) {
+      tb.classList.toggle("selected");
+    });
+    contentsections.forEach(function(tb) {
+      if (tb.style.display === "none") {
+        tb.style.display = "";
+      } else {
+        tb.style.display = "none";
+      }
+    });
+  }
+  //el.classList.toggle("selected");
+
+  //el.parentElement.classList.remove("selected");
+}
+
+
+
+
 //minigame
+/*
 game_open = false;
 function close_game() {
   game_open = false;
@@ -275,7 +299,7 @@ function step() {
 fpsInterval = 1000 / 60;
 then = Date.now();
 startTime = then;
-
+*/
 
 
 

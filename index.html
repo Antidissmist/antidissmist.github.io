@@ -10,7 +10,7 @@
   </head>
   <body>
 
-
+      <!--
     <div id="ripoffware" class="modal">
       <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
       <div style="margin: auto;margin-bottom: 140px;width: fit-content;">
@@ -22,6 +22,7 @@
       <br>
       <h3>Z X  ↔️ ↕️</h3>
     </div>
+    -->
 
 
 
@@ -77,13 +78,41 @@
           <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
         </pattern>
       </defs>
-      <path d="M720 0 L0 100 L720 100 Z" fill="url(#pattern2)"></path>
+      <path d="M720 0 L0 100 L720 100 Z" fill="url(#pattern2)" onclick="clicktab(this);"></path>
     </svg>
 
     
 
     <div class="things">
-      <div class="artgrid">
+
+      <!--
+      <div id="tabcontainer">
+        <svg class="cooltab">
+          <defs>
+            <pattern id="pattern2" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+              <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+            </pattern>
+          </defs>
+          <path d="M 0 30 L 0 100 L 180 100 L 180 0 Z M " fill="url(#pattern2)" onclick="clicktab(this);"></path>
+        </svg>
+        <svg class="cooltab">
+          <defs>
+            <pattern id="pattern2" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+              <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
+            </pattern>
+          </defs>
+          <path d="M 0 30 L 0 100 L 180 100 L 180 0 Z M " fill="url(#pattern2)" onclick="clicktab(this);"></path>
+        </svg>
+      </div>
+      -->
+
+      
+      <div class="bigtab"><h3 class="selected" onclick="clicktab(this);">art</h3></div>
+      <div class="bigtab"><h3 style="top:-42px;" onclick="clicktab(this);">gamedev</h3></div>
+      
+
+      <!-- ART SECTION -->
+      <div class="artgrid contentsection">
 
 
         <div class="artbox">
@@ -155,6 +184,83 @@
 
 
       </div>
+
+      <!-- GAMEDEV SECTION -->
+      <div class="artgrid contentsection" style="display:none;">
+
+
+        <div class="artbox">
+          <div class="artlabel">Super Work in Progress World</div>
+          <img src="/gamedev/wipdebug.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/wipdebug.png" class="imgbig" draggable="false">
+            <p>I spent too much time on this debug menu</p>
+          </div> 
+        </div>
+
+        <div class="artbox" style="height: 280px;">
+          <div class="artlabel">BIT BLOC</div>
+          <img src="/gamedev/bitblocmine.gif" onclick="openimg(this);"class="imgbox" draggable="false" style="position: relative; top: -68px;"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/bitblocmine.gif" class="imgbig" draggable="false">
+            <p>A retro building & exploration game. Made for a game jam, available on <a href="https://antidissmist.itch.io/bit-bloc">Itch.io</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox large">
+          <div class="artlabel top">SPACE///APART</div>
+          <img src="/gamedev/spaceapart.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/spaceapart.png" class="imgbig" draggable="false">
+            <p>A factory builder tower defence game, available on <a href="https://antidissmist.itch.io/spaceapart">Itch.io</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox">
+          <div class="artlabel">Super Work in Progress World</div>
+          <img src="/gamedev/wipdistract.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/wipdistract.png" class="imgbig" draggable="false">
+            <p>He might never fix that gate</p>
+          </div> 
+        </div>
+
+
+
+        <div class="artbox">
+          <div class="artlabel">Nokia Galaxy</div>
+          <img src="/gamedev/nokiamap.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/nokiamap.gif" class="imgbig" draggable="false">
+            <p>A game made for the Nokia 3310, available on <a href="https://antidissmist.itch.io/nokia-galaxy">Itch.io</a></p>
+          </div> 
+        </div>
+
+
+        <div class="artbox large">
+          <div class="artlabel">Super Work in Progress World</div>
+          <img src="/gamedev/wiptest.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/wiptest.png" class="imgbig" draggable="false">
+            <p>A test room that looks cool</p>
+          </div> 
+        </div>
+
+
+
+
+      </div>
+
+
+
     </div>
     <svg class="coolshape">
       <defs>
