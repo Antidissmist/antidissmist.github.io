@@ -111,6 +111,9 @@ ul.whatsnew li:hover {
   transform: translate(0px, 0px);
   transition: transform 0.2s ease, text-shadow 0.2s ease;
 }
+.bigtab h3.taller {
+  margin-bottom: 70px;
+}
 .bigtab h3:hover {
   color: #737d94;
   cursor: pointer;

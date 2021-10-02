@@ -68,6 +68,7 @@ function clicktab(el) {
   if (!el.classList.contains("selected")) {
     alltabs.forEach(function(tb) {
       tb.classList.toggle("selected");
+      tb.classList.toggle("taller");
     });
     contentsections.forEach(function(tb) {
       if (tb.style.display === "none") {
