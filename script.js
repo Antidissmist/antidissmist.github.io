@@ -309,32 +309,27 @@ const lerp = (x, y, a) => x * (1 - a) + y * a;
 const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
 
 
-//greeting
-topgreet = 3;
-greetings = [
-  "hello! 👋",
-  "hi 👋",
-  "hey 👋",
+themes = {
+  normal : 0,
+  spook : 1,
+};
+theme = themes.spook;
+topgreet = 4;
 
-  "🌮",
-  "🍐",
-  "🌍",
-  "🌒",
+set_theme(theme);
 
-  "🧱",
-  "🧰",
-  "⚙️",
-  
 
-];
+
+
 
 greeting = document.getElementById("greeting");
 gclicks = 0;
 function greet() {
-  var num = Math.floor(Math.random()*(Math.min(greetings.length,topgreet)));
-  greeting.innerHTML = greetings[num];
+  var arr = allthemes[theme].greetings;
+  var num = Math.floor(Math.random()*(Math.min(arr.length,topgreet)));
+  greeting.innerHTML = arr[num];
   gclicks++
-  topgreet = greetings.length;
+  topgreet = arr.length;
 }
 greet();
 

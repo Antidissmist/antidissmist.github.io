@@ -3,13 +3,16 @@
 :root {
   --c_dark: #242234;
   --c_bg: #221c1a;
+
+  --bg_back: url(files/pagebg.png);
+  --bg_front: url("/files/pagebg2.png");
 }
 
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-  background-image: url(files/pagebg.png);
+  background-image: var(--bg_back);
   background-attachment: fixed;
   background-color: var(--c_bg);
   
@@ -54,7 +57,7 @@ li.posttitle {
 ul.whatsnew li + li {
   border-top: 3px solid var(--c_dark);
   padding: 3px;
-  list-style: circle outside;
+  //list-style: circle outside;
 }
 ul.whatsnew li:hover {
   font-weight: bold;
@@ -70,7 +73,7 @@ ul.whatsnew li:hover {
   padding: 10px;
 
   background-color: var(--c_dark);
-  background-image: url("/files/pagebg2.png");
+  background-image: var(--bg_front);
   background-attachment: fixed;
   text-align: center;
 }
@@ -162,6 +165,7 @@ ul.whatsnew li:hover {
 
   fill: var(--c_dark);
 }
+
 
 
 .cooltab {
@@ -398,6 +402,8 @@ canvas {
 }
 a img {
   image-rendering: auto;
+  width: auto;
+  height: 46px;
 }
 
 .minibutton {
