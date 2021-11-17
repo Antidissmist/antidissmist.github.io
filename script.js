@@ -324,14 +324,14 @@ set_theme(theme);
 
 greeting = document.getElementById("greeting");
 gclicks = 0;
-function greet() {
+function greet(add="") {
   var arr = allthemes[theme].greetings;
   var num = Math.floor(Math.random()*(Math.min(arr.length,topgreet)));
-  greeting.innerHTML = arr[num];
+  greeting.innerHTML = arr[num] + add;
   gclicks++
   topgreet = arr.length;
 }
-greet();
+greet("  every month is spooky month");
 
 console.log("hello");
 

@@ -209,6 +209,7 @@ ul.whatsnew li:hover {
   top: 53px;
   left: 10px;
   width: 150px;
+  white-space: nowrap;
 }
 .noselect {
   user-select: none;
