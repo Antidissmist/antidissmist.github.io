@@ -59,9 +59,9 @@ ul.whatsnew li + li {
   padding: 3px;
   //list-style: circle outside;
 }
-ul.whatsnew li:hover {
+/*ul.whatsnew li:hover {
   font-weight: bold;
-}
+}*/
 
 
 
@@ -210,6 +210,14 @@ ul.whatsnew li:hover {
   left: 10px;
   width: 150px;
   white-space: nowrap;
+  font-weight: initial;
+}
+#themeselect {
+  outline: none;
+  background-color: var(--c_bg);
+  color: #cbdbfc;
+  border: none;
+  font-weight: bold;
 }
 .noselect {
   user-select: none;
@@ -262,6 +270,7 @@ img.imgbox:hover {
 .artbox .artlabel {
   visibility: hidden;
   pointer-events: none;
+  user-select: none;
   position: absolute;
   height: 0;
   text-shadow: 0px 0px 10px black;

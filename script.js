@@ -34,7 +34,7 @@ function exitmodal(el) {
   el.parentElement.parentElement.classList.remove("open");
   
 
-  close_game();
+  //close_game();
 }
 
 function togglezoom(el) {
@@ -310,10 +310,11 @@ const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
 
 
 themes = {
-  normal : 0,
-  spook : 1,
+  normal  : 0,
+  spook   : 1,
+  chilly  : 2,
 };
-theme = themes.spook;
+theme = themes.chilly;
 topgreet = 4;
 
 set_theme(theme);
@@ -331,7 +332,9 @@ function greet(add="") {
   gclicks++
   topgreet = arr.length;
 }
-greet("  every month is spooky month");
+
+
+greet();
 
 console.log("hello");
 
