@@ -314,7 +314,7 @@ themes = {
   spook   : 1,
   chilly  : 2,
 };
-theme = themes.chilly;
+theme = themes.normal;
 topgreet = 4;
 
 set_theme(theme);
