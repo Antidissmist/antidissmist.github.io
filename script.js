@@ -19,7 +19,7 @@ function openmodalid(eid) {
 }
 function open_game() {
   game_open = true;
-  openmodalid("ripoffware");
+  openmodalid("gameboy");
   animframe = window.requestAnimationFrame(step);
 }
 function exitmodal(el) {
@@ -86,8 +86,10 @@ function clicktab(el) {
 
 
 
-//minigame
+
 /*
+
+//minigame
 game_open = false;
 function close_game() {
   game_open = false;
@@ -167,6 +169,9 @@ function game_click() {
     click = true;
   }
 }
+function game_cursor(value) {
+  mcanvas.style.cursor = value;
+}
 function keydown(e) {
   if (game_open) {
     var justpressed = false;
@@ -230,6 +235,7 @@ images.interact.src = 'minigame/x.png';
 //game step
 function minigame_step() {
 
+  game_cursor("auto");
 
   if (game_screen == 0) {
 
@@ -258,6 +264,7 @@ function minigame_step() {
         game_select = i;
       }
       if (mouse_x>boxx && mouse_x<boxx+96 && mouse_y>boxy && mouse_y<boxy+96) {
+        game_cursor("pointer");
         offy -= 4;
         if (click) {
           scroll = spc*i;
@@ -276,7 +283,7 @@ function minigame_step() {
 
 
   //fx
-  scroll2 = lerp(scroll2,scroll,.2);
+  scroll2 = lerp(scroll2,scroll,.15);
   click = false;
 
 }
@@ -301,6 +308,11 @@ fpsInterval = 1000 / 60;
 then = Date.now();
 startTime = then;
 */
+
+
+
+
+
 
 
 

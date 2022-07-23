@@ -19,17 +19,17 @@
   </head>
   <body onload="scrollbg()">
 
-      <!--
-    <div id="ripoffware" class="modal">
-      <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+
+    <!--
+    <div id="gameboy" class="modal">
+      
       <div style="margin: auto;margin-bottom: 140px;width: fit-content;">
+        <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
         <div style="height: 85px;">
-          <img src="/files/ripoffware.png" class="imgbig_game" draggable="false" style="left: 0;">
+          <img src="/files/gameboy.png" class="imgbig_game" draggable="false" style="left: 0;">
         </div>
         <canvas id="minigame" width="256" height="256" style="left: -13px;" onmousemove="game_mouseover();" oncontextmenu="return false;"></canvas>
       </div>
-      <br>
-      <h3>Z X  ↔️ ↕️</h3>
     </div>
     -->
 
@@ -42,7 +42,6 @@
       <!-- #f6d43f #295c42 #141013 -->
 
       <a href="https://antidissmist.itch.io/" class="toplink"><img src="/files/itch.png" class="tilt" draggable="false"></a>
-      <!--<a href="https://www.deviantart.com/nimasisdtist" class="toplink"><img src="/files/da.png" class="tilt" draggable="false"></a>-->
       <a href="https://antidissmist.bandcamp.com/" class="toplink"><img src="/files/bclogo.png" class="tilt" draggable="false"></a>
       <a href="https://twitter.com/Antidissmist" class="toplink"><img src="/files/twt.png" class="tilt" draggable="false"></a>
 
@@ -51,7 +50,8 @@
       <div class="extrasbox">
         <h3 id="greeting" class="greeting boxtilt noselect" onclick="greet();"></h3>
 
-        <!-- beep boop
+
+        <!--
         <img src="/files/game_button.png" class="minibutton tilt" style="position: relative;left: 46.5%;top: -94px;" onclick="open_game();" draggable="false">
         -->
 
@@ -60,7 +60,7 @@
     </div>
 
 
-    <svg class="coolshape">
+    <svg class="coolshape" onload="scrollbg()">
       <defs>
         <pattern id="pattern1" class="coolpattern" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
           <image xlink:href="files/pagebg2.png" width="96" height="96"></image>
@@ -75,9 +75,9 @@
         <li class="posttitle">What's new 👀</li>
         
 
-        <li>New game <a href="https://antidissmist.itch.io/ex-polaris">EX POLARIS</a> is out!</li>
+        <li>New game <a href="https://antidissmist.itch.io/dicemancer">DICEMANCER</a> 🎲<br> made for the <a href="https://itch.io/jam/gmtk-jam-2022">GMTK Game Jam 2022</a></li>
         
-        <li>Working on <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a> version 3</li>
+        <li>Working on <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a> ⛏️ version 3</li>
 
         <li>Fun themes 👉
           <select id="themeselect" onchange="set_theme(this.value); greet();">
@@ -87,7 +87,7 @@
           </select>
         </li>
 
-        <li><image src="files/froggychair.png" draggable="false" style="height:65px;"></image></li>
+        <!--<li><image src="files/froggychair.png" draggable="false" style="height:65px;"></image></li>-->
 
       </ul>
     </div>
@@ -295,6 +295,7 @@
     </svg>
 
 
+    <!--
     <div class="centerbox">
       <div style="height: 0;">
         <svg class="coolshape" style="width: 360px;height:135px;position: relative;top: -27px;z-index: -1;">
@@ -316,7 +317,7 @@
         </p>
       </div>
     </div>
-
+    -->
 
     <br><br>
 
