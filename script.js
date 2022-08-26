@@ -311,7 +311,12 @@ startTime = then;
 
 
 
-
+//start videos in case they pause
+window.addEventListener('focus', (ev)=>{
+  document.querySelectorAll('video').forEach((v)=>{
+    v.play();
+  });
+});
 
 
 

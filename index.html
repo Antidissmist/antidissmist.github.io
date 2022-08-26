@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <!-- 
+    Hi welcome to html land
+  -->
   <head>
     <title>Antidissmist</title>
     <meta name="viewport" content="width=900">
@@ -77,7 +80,7 @@
 
         <li>New game <a href="https://antidissmist.itch.io/dicemancer">DICEMANCER</a> 🎲<br> made for the <a href="https://itch.io/jam/gmtk-jam-2022">GMTK Game Jam 2022</a></li>
         
-        <li>Working on <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a> ⛏️ version 3</li>
+        <li>Working on <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a> ⛏️</li>
 
         <li>Fun themes 👉
           <select id="themeselect" onchange="set_theme(this.value); greet();">
@@ -130,12 +133,12 @@
       -->
 
       
-      <div class="bigtab"><h3 class="selected" onclick="clicktab(this);">art</h3></div>
-      <div class="bigtab"><h3 style="top:-42px;" onclick="clicktab(this);">gamedev</h3></div>
+      <div class="bigtab"><h3 onclick="clicktab(this);">art</h3></div>
+      <div class="bigtab"><h3 class="selected" style="top:-42px;" onclick="clicktab(this);">gamedev</h3></div>
       
 
       <!-- ART SECTION -->
-      <div class="artgrid contentsection">
+      <div class="artgrid contentsection" style="display:none;">
 
 
         <div class="artbox">
@@ -144,7 +147,7 @@
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
             <img src="/art/yellow.png" class="imgbig" draggable="false">
-            <p>(2021) A recent doodle drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
+            <p>(2021) Drawn in <a href="https://www.aseprite.org/">Aseprite</a></p>
           </div> 
         </div>
 
@@ -209,19 +212,44 @@
       </div>
 
       <!-- GAMEDEV SECTION -->
-      <div class="artgrid contentsection" style="display:none;">
+      <div class="artgrid contentsection">
+
+
+
 
 
         <div class="artbox">
-          <div class="artlabel">Waiting Room</div>
-          <img src="/gamedev/waitingroom.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">EX POLARIS</div>
+          <video autoplay loop muted class="imgbox" onclick="openimg(this);">
+            <source src="/videos/expolaris.mp4" type="video/mp4">
+          </video>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
-            <img src="/gamedev/waitingroom.gif" class="imgbig" draggable="false">
-            <p>An unfinished nonviolent DOOM style game</p>
+            <video autoplay loop muted class="imgbig">
+              <source src="/videos/expolaris.mp4" type="video/mp4">
+            </video>
+            <p>(2022) EX POLARIS, an adventure game about a mysterious visit by aliens.  Available on <a href="https://antidissmist.itch.io/ex-polaris">Itch.io</a>.<br>Fully developed in 2 months.</p>
           </div> 
         </div>
 
+        
+
+        <div class="artbox" style="height:203px;">
+          <div class="artlabel">Dungeon microgame</div>
+          <video autoplay loop muted class="imgbox" onclick="openimg(this);" style="position: relative;top: -30px;">
+            <source src="/videos/dungeon.mp4" type="video/mp4">
+          </video>
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <video autoplay loop muted class="imgbig">
+              <source src="/videos/dungeon.mp4" type="video/mp4">
+            </video>
+            <p>(2022) Dungeon microgame, made for <a href="https://loungeware.games/">Loungeware</a>, a WarioWare style collaboration game.</p>
+          </div> 
+        </div>
+        
+
+        <!--
         <div class="artbox" style="height: 263px;">
           <div class="artlabel">BIT BLOC</div>
           <img src="/gamedev/bitblocmine.gif" onclick="openimg(this);"class="imgbox" draggable="false" style="position: relative; top: -85px;"> 
@@ -231,8 +259,21 @@
             <p>A retro building & exploration game. Made for a game jam, available on <a href="https://antidissmist.itch.io/bit-bloc">Itch.io</a></p>
           </div> 
         </div>
+        -->
 
 
+        <div class="artbox large">
+          <div class="artlabel">BIT BLOC</div>
+          <img src="/gamedev/bitblocvillage.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/bitblocvillage.png" class="imgbig" draggable="false">
+            <p>My current project, <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a>.  An infinite building and exploration game, Inspired by Terraria and Minecraft. In development for around the past year.</p>
+          </div> 
+        </div>
+
+        
+        <!--
         <div class="artbox large">
           <div class="artlabel top">SPACE///APART</div>
           <img src="/gamedev/spaceapart.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
@@ -242,8 +283,9 @@
             <p>A factory builder tower defence game, available on <a href="https://antidissmist.itch.io/spaceapart">Itch.io</a></p>
           </div> 
         </div>
+        -->
 
-
+        <!--
         <div class="artbox">
           <div class="artlabel">Super Work in Progress World</div>
           <img src="/gamedev/wipdistract.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
@@ -251,6 +293,22 @@
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
             <img src="/gamedev/wipdistract.png" class="imgbig" draggable="false">
             <p>He might never fix that gate</p>
+          </div> 
+        </div>
+        -->
+
+        
+        <div class="artbox">
+          <div class="artlabel">Micro Kart</div>
+          <video autoplay loop muted class="imgbox" onclick="openimg(this);">
+            <source src="/videos/kart2.mp4" type="video/mp4">
+          </video>
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <video autoplay loop muted class="imgbig">
+              <source src="/videos/kart2.mp4" type="video/mp4">
+            </video>
+            <p>(2022) Micro Kart, A fast-paced multiplayer racing game. made in ~1 week. Free on <a href="https://gx.games/games/gcr7xk/micro-kart/">gx.games</a></p>
           </div> 
         </div>
 
@@ -262,11 +320,23 @@
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
             <img src="/gamedev/nokiamap.gif" class="imgbig" draggable="false">
-            <p>A game made for the Nokia 3310, available on <a href="https://antidissmist.itch.io/nokia-galaxy">Itch.io</a></p>
+            <p>(2021) Nokia Galaxy, A game made for the Nokia 3310. available on <a href="https://antidissmist.itch.io/nokia-galaxy">Itch.io</a></p>
           </div> 
         </div>
 
 
+
+        <div class="artbox large">
+          <div class="artlabel">Unnamed fake 2d game</div>
+          <img src="/gamedev/fake2d.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
+            <img src="/gamedev/fake2d.png" class="imgbig" draggable="false">
+            <p>Made in Gamemaker with my own 3d editor thing</p>
+          </div> 
+        </div>
+
+        <!--
         <div class="artbox large">
           <div class="artlabel">Super Work in Progress World</div>
           <img src="/gamedev/wiptest.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
@@ -276,7 +346,7 @@
             <p>A test room that looks cool</p>
           </div> 
         </div>
-
+        -->
 
 
 
@@ -295,7 +365,7 @@
     </svg>
 
 
-    <!--
+    
     <div class="centerbox">
       <div style="height: 0;">
         <svg class="coolshape" style="width: 360px;height:135px;position: relative;top: -27px;z-index: -1;">
@@ -309,15 +379,25 @@
       </div>
       <div class="bottom boxtilt">
         <br>
-        <a href="https://github.com/Antidissmist/antidissmist.github.io">
+        <!--<a href="https://github.com/Antidissmist/antidissmist.github.io">
           Thanks GitHub Pages
+        </a>-->
+        <!--<p>
+          Let me know if my page breaks 🔧
+        </p>-->
+        <a href="https://github.com/Antidissmist/antidissmist.github.io">
+          Site coded with ❤️ by me
         </a>
-        <p>
+        <!--<p>
           Let me know if my page breaks 🔧
         </p>
+        <!--<p> </p>
+        <p>
+          Coded with ❤️ by me
+        </p>-->
       </div>
     </div>
-    -->
+    
 
     <br><br>
 

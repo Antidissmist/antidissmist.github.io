@@ -257,17 +257,17 @@ ul.whatsnew li + li {
   grid-column: auto / span 2;
   grid-row: auto / span 2;
 }
-.artbox img.imgbox {
+.artbox .imgbox {
   width: 345px;
   margin: 0;
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s;
 }
-.artbox.large img.imgbox {
+.artbox.large .imgbox {
   width: 100%;
 }
-img.imgbox:hover {
+.imgbox:hover {
   transform: scale(0.98);
   transition: transform 0.1s;
 }
@@ -371,15 +371,17 @@ img.imgbox:hover {
   overflow-y: scroll;
 }
 .modal p {
+  max-width: 80%;
+  margin: auto;
   margin-bottom: 50px;
 }
 .modal.open {
   display: block;
 }
-.modal.zoom.open img.imgbig {
+.modal.zoom.open .imgbig {
   cursor: zoom-in;
 }
-.modal.zoom.open.zoomed img.imgbig {
+.modal.zoom.open.zoomed .imgbig {
   cursor: zoom-out;
 }
 
@@ -404,7 +406,7 @@ img.imgbox:hover {
 
 
 
-img {
+img, video {
   user-select: none;
   margin: 15px;
   -ms-interpolation-mode: nearest-neighbor;
