@@ -61,6 +61,18 @@ function findmodal(el) {
 
 
 
+function modalclick(e) {
+  if (e.target == this) { //clicked on background
+    exitmodal(this.querySelector(".modal_exit"));
+  }
+}
+
+const allmodals = document.querySelectorAll(".modal");
+allmodals.forEach((m)=>{
+  m.addEventListener('click', modalclick);
+});
+
+
 
 const alltabs = document.querySelectorAll(".bigtab h3");
 const contentsections = document.querySelectorAll(".contentsection");
