@@ -388,6 +388,9 @@ ul.whatsnew li + li {
 
   cursor: pointer;
 }
+.modal a {
+  cursor: pointer;
+}
 .modal * {
   cursor: auto;
 }

@@ -32,7 +32,7 @@ function exitmodal(el) {
     opened.classList.remove("invis");
   }
   el.parentElement.parentElement.classList.remove("open");
-  
+
 
   //close_game();
 }
@@ -47,14 +47,14 @@ function togglezoom(el) {
 /// get parent element, then find modal
 function findmodal(el) {
   var found = null;
-  for (var i=0; i<el.parentNode.childNodes.length; i++) {
-      var n = el.parentNode.childNodes[i].className;
-      if (n!=undefined) {
-        if (n.includes("modal")) {
-          found = el.parentNode.childNodes[i];
-          break;
-        }
+  for (var i = 0; i < el.parentNode.childNodes.length; i++) {
+    var n = el.parentNode.childNodes[i].className;
+    if (n != undefined) {
+      if (n.includes("modal")) {
+        found = el.parentNode.childNodes[i];
+        break;
       }
+    }
   }
   return found;
 }
@@ -68,7 +68,7 @@ function modalclick(e) {
 }
 
 const allmodals = document.querySelectorAll(".modal");
-allmodals.forEach((m)=>{
+allmodals.forEach((m) => {
   m.addEventListener('click', modalclick);
 });
 
@@ -324,8 +324,8 @@ startTime = then;
 
 
 //start videos in case they pause
-window.addEventListener('focus', (ev)=>{
-  document.querySelectorAll('video').forEach((v)=>{
+window.addEventListener('focus', (ev) => {
+  document.querySelectorAll('video').forEach((v) => {
     v.play();
   });
 });
@@ -339,11 +339,11 @@ const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
 
 
 themes = {
-  normal  : 0,
-  spook   : 1,
-  chilly  : 2,
+  normal: 0,
+  spook: 1,
+  chilly: 2,
 };
-theme = themes.spook;
+theme = themes.normal;
 topgreet = 4;
 
 set_theme(theme);
@@ -354,9 +354,9 @@ set_theme(theme);
 
 greeting = document.getElementById("greeting");
 gclicks = 0;
-function greet(add="") {
+function greet(add = "") {
   var arr = allthemes[theme].greetings;
-  var num = Math.floor(Math.random()*(Math.min(arr.length,topgreet)));
+  var num = Math.floor(Math.random() * (Math.min(arr.length, topgreet)));
   greeting.innerHTML = arr[num] + add;
   gclicks++
   topgreet = arr.length;
