@@ -358,15 +358,10 @@ ul.whatsnew li + li {
 }
 
 
-.namegif {
-  filter: drop-shadow(4px 4px 0px #295c42) drop-shadow(4px 4px 0px #141013);
-  transition: filter 0.2s;
+.nametitle {
+  height: 44px;
+  width: auto;
 }
-.namegif:hover {
-  filter: drop-shadow(-4px 4px 0px #27547d) drop-shadow(-4px 4px 0px #141013);
-  transition: filter 0.2s;
-}
-
 
 
 

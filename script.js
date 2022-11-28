@@ -346,6 +346,29 @@ themes = {
 theme = themes.normal;
 topgreet = 4;
 
+
+//set theme by time of year
+try {
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay); //number day of the year
+
+  //after dec 1, before jan 24
+  if (day>335 || day<24) {
+    theme = themes.chilly;
+  }
+  //between oct 1 and nov 7
+  else if (day>274 && day<311) {
+    theme = themes.spooky;
+  }
+  
+}
+catch (e) {
+  theme = themes.normal;
+}
+
 set_theme(theme);
 
 
