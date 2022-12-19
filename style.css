@@ -12,7 +12,7 @@
   --globalfont: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   --globalweight: bold;
 
-  --modalshadow: 0 0 25px hsl(294deg 37% 22%);
+  --modalshadow: 0 0 25px var(--c_dark);
 
   --bg_back: url(files/pagebg.png);
   --bg_front: url("/files/pagebg2.png");
@@ -170,7 +170,6 @@ ul.whatsnew li + li {
   margin: auto;
   padding: 10px;
 
-  background-color: var(--c_dark);
   background-image: var(--bg_front);
   background-attachment: fixed;
   text-align: center;
@@ -213,9 +212,6 @@ ul.whatsnew li + li {
   box-shadow: 0px 0px 0px var(--c_dark);
   transform: translate(0px, 0px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.bigtab h3.taller {
-  margin-bottom: 70px;
 }
 .bigtab h3:hover {
   color: var(--c_text2);
@@ -269,6 +265,7 @@ ul.whatsnew li + li {
   display: block;
 
   fill: var(--c_dark);
+  pointer-events: none;
 }
 
 
@@ -357,55 +354,48 @@ ul.whatsnew li + li {
 .artbox {
   margin: 0px;
   position: relative;
+  border: 2px solid var(--c_dark);
+  border-radius: 16px;
+  padding: 0;
+  margin-top: 14px;
+  background-color: var(--c_bg2);
+  overflow: hidden;
+  height: fit-content;
+  cursor: pointer;
 }
+.artbox:hover {
+  border: 2px solid var(--c_text2);
+}
+.artbox:hover .artlabel {
+  color: var(--c_text2);
+}
+
+
+
 .artbox.large {
   grid-column: auto / span 2;
   grid-row: auto / span 2;
 }
 .artbox .imgbox {
-  width: 345px;
+  width: 100%;
   margin: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.1s;
+  border-radius: 0px 0px 16px 16px;
 }
 .artbox.large .imgbox {
   width: 100%;
 }
-.imgbox:hover {
-  transform: scale(0.98);
-  transition: transform 0.1s;
-}
 .artbox .artlabel {
-  visibility: hidden;
-  pointer-events: none;
-  user-select: none;
-  position: absolute;
-  height: 26px;
-  //text-shadow: 0px 0px 10px black;
-  transform: translate(0px, 26px);
-  background-color: #000000a1;
-  border-radius: 7px;
-  padding: 2px 6px;
-  color: white;
-  z-index: 1;
-
+  color: var(--c_dark);
   font-size: 17pt;
   text-align: left;
-  left: 17px;
-  bottom: 45px;
-}
-.artbox:hover .artlabel {
-  visibility: visible;
+  margin: 8px;
+  margin-top: 2px;
 }
 .imgbox.invis {
   visibility: hidden;
 }
 .artbox.open .artlabel {
   visibility: hidden;
-}
-.artbox .artlabel.top {
-  top: -6px;
 }
 
 
@@ -488,7 +478,7 @@ ul.whatsnew li + li {
   white-space: break-spaces;
   font-size: 17pt;
   font-weight: 100;
-  border: 2px solid var(--c_modalborder);
+  border: 2px solid var(--c_dark);
   border-radius: 10px;
   color: var(--c_text2);
   background-color: var(--c_bg);
@@ -510,7 +500,7 @@ ul.whatsnew li + li {
   margin: 0;
   max-width: 80%;
   max-height: 80%;
-  border: 2px solid var(--c_modalborder);
+  border: 2px solid var(--c_dark);
   border-radius: 10px;
   overflow-y: scroll;
 

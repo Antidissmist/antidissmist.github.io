@@ -19,6 +19,10 @@
     <meta property="og:url" content="https://antidissmist.github.io/" />
     <meta property="og:image" content="/files/embedimage.png" />
 
+
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="jquery.lazyloadxt.js"></script>-->
     
   </head>
   <body onload="scrollbg()">
@@ -136,7 +140,7 @@
 
       
       <div class="bigtab"><h3 onclick="clicktab(this);">art</h3></div>
-      <div class="bigtab"><h3 class="selected" style="top:-42px;" onclick="clicktab(this);">gamedev</h3></div>
+      <div class="bigtab"><h3 class="selected" onclick="clicktab(this);">gamedev</h3></div>
       
 
       <!-- ART SECTION -->
@@ -144,8 +148,8 @@
 
 
         <div class="artbox">
-          <div class="artlabel">doodle</div>
           <img src="/art/yellow.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">doodle</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/yellow.png" class="imgbig" draggable="false">
@@ -153,9 +157,9 @@
           </div> 
         </div>
 
-        <div class="artbox" style="height: 317px;">
+        <div class="artbox topright">
+          <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="artlabel">Voxel tower</div>
-          <img src="/art/voxeltower.png" onclick="openimg(this);"class="imgbox" draggable="false" style="position: relative; top: -30px;"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/voxeltower.png" class="imgbig" draggable="false">
@@ -165,8 +169,8 @@
 
 
         <div class="artbox large">
-          <div class="artlabel">doodle</div>
           <img src="/art/orangeboxes.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">doodle</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/orangeboxes.png" class="imgbig" draggable="false">
@@ -176,8 +180,8 @@
 
 
         <div class="artbox">
-          <div class="artlabel">Space Tower Headquarters</div>
           <img src="/art/spacetop.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">Space Tower Headquarters</div>
           <div class="modal zoom">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/spacefull.png" class="imgbig" onclick="togglezoom(this);" draggable="false">
@@ -188,8 +192,8 @@
 
 
         <div class="artbox">
-          <div class="artlabel">Valley View Shack</div>
           <img src="/art/shack.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">Valley View Shack</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/shack.gif" class="imgbig" draggable="false">
@@ -199,8 +203,8 @@
 
 
         <div class="artbox large">
-          <div class="artlabel">Solar Sunset Cruise</div>
           <img src="/art/solar.gif" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">Solar Sunset Cruise</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/art/solar.gif" class="imgbig" draggable="false">
@@ -221,10 +225,10 @@
 
 
         <div class="artbox">
-          <div class="artlabel">EX POLARIS</div>
           <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
             <source src="/videos/expolaris.mp4" type="video/mp4">
           </video>
+          <div class="artlabel">EX POLARIS</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <video autoplay loop muted playsinline preload="none" class="imgbig">
@@ -236,11 +240,11 @@
 
         
 
-        <div class="artbox" style="height:203px;">
-          <div class="artlabel">Dungeon microgame</div>
-          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);" style="position: relative;top: -30px;">
+        <div class="artbox topright">
+          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
             <source src="/videos/dungeon.mp4" type="video/mp4">
           </video>
+          <div class="artlabel">Dungeon microgame</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <video autoplay loop muted playsinline preload="none" class="imgbig">
@@ -265,11 +269,15 @@
 
 
         <div class="artbox large">
+          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
+            <source src="/videos/bitbloc.mp4" type="video/mp4">
+          </video>
           <div class="artlabel">BIT BLOC</div>
-          <img src="/gamedev/bitblocvillage.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
-            <img src="/gamedev/bitblocvillage.png" class="imgbig" draggable="false">
+            <video autoplay loop muted playsinline preload="none" class="imgbig">
+              <source src="/videos/bitbloc.mp4" type="video/mp4">
+            </video>
             <p>My current project in development, <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a>. An infinite building and exploration game Inspired by Terraria and Minecraft.</p>
           </div> 
         </div>
@@ -287,24 +295,12 @@
         </div>
         -->
 
-        <!--
-        <div class="artbox">
-          <div class="artlabel">Super Work in Progress World</div>
-          <img src="/gamedev/wipdistract.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
-          <div class="modal">
-            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
-            <img src="/gamedev/wipdistract.png" class="imgbig" draggable="false">
-            <p>He might never fix that gate</p>
-          </div> 
-        </div>
-        -->
-
         
         <div class="artbox">
-          <div class="artlabel">Micro Kart</div>
           <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
             <source src="/videos/kart2.mp4" type="video/mp4">
           </video>
+          <div class="artlabel">Micro Kart</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <video autoplay loop muted playsinline preload="none" class="imgbig">
@@ -315,22 +311,6 @@
         </div>
 
 
-
-
-        
-        <div class="artbox">
-          <div class="artlabel">WIP magic skateboard game</div>
-          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
-            <source src="/videos/board2.mp4" type="video/mp4">
-          </video>
-          <div class="modal">
-            <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
-            <video autoplay loop muted playsinline preload="none" class="imgbig">
-              <source src="/videos/board2.mp4" type="video/mp4">
-            </video>
-            <p>WIP magic skateboard game, made for fun in around 2 weeks. I hope to release it after BIT BLOC.</p>
-          </div> 
-        </div>
 
         <!--
         <div class="artbox">
@@ -345,27 +325,48 @@
         -->
 
 
+        <!--
         <div class="artbox large">
-          <div class="artlabel">Unnamed fake 2d game</div>
           <img src="/gamedev/fake2d.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+          <div class="artlabel">Unnamed fake 2d game</div>
           <div class="modal">
             <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
             <img src="/gamedev/fake2d.png" class="imgbig" draggable="false">
             <p>Unnamed fake 2d game. Made in Gamemaker with my own 3d editor thing. (designed in 3d, rendered as "fake 2d" with 3d lighting)</p>
           </div> 
         </div>
+        -->
 
-        <!--
-        <div class="artbox large">
-          <div class="artlabel">Super Work in Progress World</div>
-          <img src="/gamedev/wiptest.png" onclick="openimg(this);"class="imgbox" draggable="false"> 
+
+        <div class="artbox">
+          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
+            <source src="/videos/haunter.mp4" type="video/mp4">
+          </video>
+          <div class="artlabel">HAUNTER</div>
           <div class="modal">
-            <h3 class="modal_exit" onclick="exitmodal(this);">back</h3>
-            <img src="/gamedev/wiptest.png" class="imgbig" draggable="false">
-            <p>A test room that looks cool</p>
+            <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
+            <video autoplay loop muted playsinline preload="none" class="imgbig">
+              <source src="/videos/haunter.mp4" type="video/mp4">
+            </video>
+            <p>(2022) HAUNTER, a small game about a ghost.<br> Made around halloween for fun. Free on <a href="https://antidissmist.itch.io/haunter">Itch.io</a> and <a href="https://gx.games/games/fjpgq8/haunter/">gx.games</a></p>
           </div> 
         </div>
-        -->
+
+
+        <div class="artbox large">
+          <video autoplay loop muted playsinline preload="none" class="imgbox" onclick="openimg(this);">
+            <source src="/videos/board2.mp4" type="video/mp4">
+          </video>
+          <div class="artlabel">WIP magic skateboard game</div>
+          <div class="modal">
+            <h3 class="modal_exit" onclick="exitmodal(this);">‹ back</h3>
+            <video autoplay loop muted playsinline preload="none" class="imgbig">
+              <source src="/videos/board2.mp4" type="video/mp4">
+            </video>
+            <p>WIP magic skateboard game, made for fun in around 2 weeks. I hope to release it after BIT BLOC.</p>
+          </div> 
+        </div>
+        
 
 
 
