@@ -18,15 +18,22 @@ window.onresize = function() {scrollbg()};
 
 
 
+class pagetheme {
+  constructor(bg_front,bg_back,c_dark,c_bg,c_bg2,greetings) {
+    this.bg_front = bg_front;
+    this.bg_back = bg_back;
+    this.c_dark = c_dark;
+    this.c_bg = c_bg;
+    this.c_bg2 = c_bg2;
+    this.greetings = greetings;
+  }
+}
+
 allthemes = [
 
 //normal
-{
-bg: "pagebg",
-bg2: "pagebg2",
-c_dark: "#242234",
-c_bg: "#221c1a",
-greetings : [
+new pagetheme("pagebg2","pagebg","#793a80","#242234","#242234",
+[
   "hello! 👋",
   "hi 👋",
   "hey 👋",
@@ -40,17 +47,12 @@ greetings : [
   "🧱",
   "🧰",
   "⚙️",
+]),
 
-]
-},
 
-//spook
-{
-bg: "pagebg_2",
-bg2: "pagebg2_2",
-c_dark: "#3f2832",
-c_bg: "#181425",
-greetings: [
+//spooky
+new pagetheme("pagebg2_2","pagebg_2","#9e2835","#3f2832","#181425",
+[
   "💀",
   "☠️",
   "🎃",
@@ -64,17 +66,13 @@ greetings: [
   "⛏️",
   "🧰",
   "⚙️",
+]),
 
-]
-},
 
 //chilly
-{
-bg: "pagebg3",
-bg2: "pagebg3_2",
-c_dark: "#124e89",
-c_bg: "#262b44",
-greetings: [
+
+new pagetheme("winter_front","winter_back","#124e89","#262b44","#221c1a",
+[
   "☃️",
   "🏔️",
   "🌨️",
@@ -88,9 +86,9 @@ greetings: [
   "🌮",
   "🧰",
   "⚙️",
+]),
 
-]
-},
+
 ];
 
 
@@ -100,20 +98,22 @@ function set_theme(num) {
 
   theme = num;
 
-  var bg = allthemes[num].bg;
-  var bg2 = allthemes[num].bg2;
+  var bg_back = allthemes[num].bg_back;
+  var bg_front = allthemes[num].bg_front;
   var cdark = allthemes[num].c_dark;
   var cbg = allthemes[num].c_bg;
+  var cbg2 = allthemes[num].c_bg2;
 
   coolshapes = document.querySelectorAll(".coolshape image");
   for (let el of coolshapes) {
-    el.setAttribute("xlink:href","files/"+bg2+".png");
+    el.setAttribute("xlink:href","files/"+bg_front+".png");
   }
   let root = document.documentElement; //update css
-  root.style.setProperty('--bg_back', "url(files/"+bg+".png)");
-  root.style.setProperty('--bg_front', "url(files/"+bg2+".png)");
+  root.style.setProperty('--bg_back', "url(files/"+bg_back+".png)");
+  root.style.setProperty('--bg_front', "url(files/"+bg_front+".png)");
   root.style.setProperty('--c_dark', cdark);
   root.style.setProperty('--c_bg', cbg);
+  root.style.setProperty('--c_bg2', cbg2);
 
   themeselect.value = theme;
 

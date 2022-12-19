@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=900">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
 
 
     <meta name="description" content="My homepage for anything and everything 😎 🏖️ 👽"/>
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Antidissmist" />
-    <meta property="og:description" content="😎 🏖️ 👽" />
+    <meta property="og:description" content="My homepage for anything and everything 😎 🏖️ 👽" />
     <meta property="og:url" content="https://antidissmist.github.io/" />
     <meta property="og:image" content="/files/embedimage.png" />
 
@@ -42,22 +42,26 @@
     <div class="things">
       <img src="/files/joelbirb.png" class="pfp" draggable="false"><br>
       <img src="/files/name.png" class="nametitle" draggable="false"><br>
-      <!-- #f6d43f #295c42 #141013 -->
 
-      <a href="https://antidissmist.itch.io/" class="toplink"><img src="/files/itch.png" class="tilt" draggable="false"></a>
-      <a href="https://antidissmist.bandcamp.com/" class="toplink"><img src="/files/bclogo.png" class="tilt" draggable="false"></a>
-      <a href="https://twitter.com/Antidissmist" class="toplink"><img src="/files/twt.png" class="tilt" draggable="false"></a>
+      <div class="descbox">
+        👋 Yo! I am a solo developer working on a game called <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a>⛏️<br>
+        Here are all the places you can find me:
+      </div>
 
-      
+      <div class="socialsbox">
 
-      <div class="extrasbox">
-        <h3 id="greeting" class="greeting boxtilt noselect" onclick="greet();"></h3>
-
-
-        <!--
-        <img src="/files/game_button.png" class="minibutton tilt" style="position: relative;left: 46.5%;top: -94px;" onclick="open_game();" draggable="false">
-        -->
-
+        <a href="https://antidissmist.itch.io/" class="linkbox"><div class="imgholder"><img src="/files/itch.png" draggable="false"></div><h3>itch.io</h3><p>games I've made</p></a>
+        
+        <a href="https://antidissmist.bandcamp.com/" class="linkbox"><div class="imgholder"><img src="/files/bclogo.png" draggable="false"></div><h3>bandcamp</h3><p>soundtracks</p></a>
+        
+        <a href="https://twitter.com/Antidissmist" class="linkbox"><div class="imgholder"><img src="/files/twt.png" draggable="false"></div><h3>twitter</h3><p>updates and stuff</p></a>
+        <!-- later
+        <a href="https://cohost.org/anti" class="linkbox"><div class="imgholder"><img src="/files/coh.png" draggable="false"></div><h3>cohost</h3><p>bean platform</p></a>
+        
+        <a href="https://mastodon.gamedev.place/@antidissmist" class="linkbox"><div class="imgholder"><img src="/files/mast.png" draggable="false"></div><h3>mastodon</h3><p>elephant platform</p></a>-->
+        
+        <a href="https://www.youtube.com/@antidissmist" class="linkbox"><div class="imgholder"><img src="/files/yt.png" draggable="false"></div><h3>youtube</h3><p>mostly game trailers</p></a>
+        
       </div>
 
     </div>
@@ -78,8 +82,9 @@
         <li class="posttitle">What's new 👀</li>
         
 
-        <li>⛏️ <a href="https://antidissmist.itch.io/bit-bloc">BIT BLOC</a> alpha 1</li>
-        <li>New game <a href="https://antidissmist.itch.io/haunter">HAUNTER</a> 👻</li>
+        <li><a href="https://antidissmist.itch.io/bit-bloc/devlog">BIT BLOC alpha 1.0.1</a>
+        <img src="files/changelog101.png" draggable="false">
+        </li>
 
         <li>Fun themes 👉
           <select id="themeselect" onchange="set_theme(this.value); greet();">
@@ -88,8 +93,6 @@
             <option value="2">Chilly</option>
           </select>
         </li>
-
-        <!--<li><image src="files/froggychair.png" draggable="false" style="height:65px;"></image></li>-->
 
       </ul>
     </div>

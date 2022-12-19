@@ -3,8 +3,11 @@
 :root {
   --c_dark: #242234;
   --c_bg: #221c1a;
+  --c_bg2: #2c2243;
   --c_modalborder: #793a80;
   --c_text2: #cbdbfc;
+  --c_buttonback: #181425;
+  --c_link: #ffd541;
 
   --globalfont: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   --globalweight: bold;
@@ -23,22 +26,25 @@ body {
   background-image: var(--bg_back);
   background-attachment: fixed;
   background-color: var(--c_bg);
+  image-rendering: pixelated;
   
   color: var(--c_text2);
   margin: 0;
   overflow-x: hidden;
 
 }
+
+
 .backgroup {
   //filter: drop-shadow(0px 0px 20px #00000083);
   box-shadow: #000000b3 0 0 20px;
 }
 p {
-  color: #ffffff;
+  color: var(--c_text2);
   margin: 0;
 }
-p a, li a {
-  color: #ffd541;
+p a, li a, .descbox a {
+  color: var(--c_link);
 }
 
 .thingsbg {
@@ -61,7 +67,9 @@ ul.whatsnew {
   border-radius: 20px;
   font-size: 14pt;
   font-weight: 100;
-  //box-shadow: #000000b3 0 0 20px;
+}
+ul.whatsnew img {
+  max-width: 85%;
 }
 li.posttitle {
   font-size: 16pt;
@@ -74,10 +82,85 @@ ul.whatsnew li + li {
   padding: 3px;
   //list-style: circle outside;
 }
-/*ul.whatsnew li:hover {
-  font-weight: bold;
-}*/
 
+
+.descbox {
+  width: 50%;
+  margin: auto;
+  padding: 8px;
+
+  color: var(--c_dark);
+  background-color: var(--c_bg2);
+
+  border: 2px solid var(--c_dark);
+  border-radius: 10px;
+
+  margin-bottom: 28px;
+}
+.socialsbox {
+  width: 80%;
+  margin: auto;
+
+
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-gap: 10px;
+  
+}
+.linkbox {
+  color: var(--c_dark);
+  background-color: var(--c_bg2);
+  border: 2px solid var(--c_dark);
+  border-radius: 10px;
+  text-align: right;
+  font-size: 18px;
+  height: 48px;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+
+  box-shadow: 0px 0px 0px var(--c_dark);
+  transform: translate(0px, 0px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.linkbox:hover {
+  box-shadow: 0px 4px 0px var(--c_dark);
+  transform: translate(0px, -4px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.linkbox * {
+  margin: 0;
+  display: block;
+}
+.linkbox .imageholder {
+  width: 0;
+  height: 0;
+}
+.linkbox img {
+  display: block;
+  position: absolute;
+  width: 42px;
+  height: auto;
+  margin-left: 7px;
+  margin-top: 6px;
+  image-rendering: pixelated;
+}
+.linkbox h3 {
+  color: var(--c_dark);
+  position: relative;
+  top: 2px;
+  left: 55px;
+  font-size: 19px;
+}
+.linkbox p {
+  color: var(--c_dark);
+  position: relative;
+  top: 2px;
+  left: 55px;
+  font-size: 12px;
+}
 
 
 
@@ -113,33 +196,40 @@ ul.whatsnew li + li {
   height: 60px;
 }
 .bigtab h3 {
-  color: #586072;
-  //margin: 0;
+  color: var(--c_dark);
   font-size: 20pt;
   position: relative;
 
   margin: auto;
   margin-bottom: 42px;
-  width: 100px;
+  width: fit-content;
   user-select: none;
 
+  border: 2px solid var(--c_dark);
+  border-radius: 8px;
+  background-color: var(--c_bg);
+  padding: 0px 16px 2px 16px;
 
-  text-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px var(--c_dark);
   transform: translate(0px, 0px);
-  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .bigtab h3.taller {
   margin-bottom: 70px;
 }
 .bigtab h3:hover {
-  color: #737d94;
+  color: var(--c_text2);
   cursor: pointer;
+
+  box-shadow: 0px 2px 0px var(--c_dark);
+  transform: translate(0px, -2px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .bigtab h3.selected {
-  color: #cbdbfc;
-  text-shadow: 0px 10px 0px #000000;
+  color: white;
+  box-shadow: 0px 10px 0px var(--c_dark);
   transform: translate(0px, -10px);
-  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #tabcontainer {
