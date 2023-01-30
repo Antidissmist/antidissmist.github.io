@@ -354,8 +354,8 @@ try {
   var oneDay = 1000 * 60 * 60 * 24;
   var day = Math.floor(diff / oneDay); //number day of the year
 
-  //after dec 1, before jan 24
-  if (day>335 || day<24) {
+  //after dec 1, before feb something
+  if (day>335 || day<45) {
     theme = themes.chilly;
   }
   //between oct 1 and nov 7
