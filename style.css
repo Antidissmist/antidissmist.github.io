@@ -147,6 +147,9 @@ ul.whatsnew li + li {
   margin-top: 6px;
   image-rendering: pixelated;
 }
+.smooth img {
+  image-rendering: auto;
+}
 .linkbox h3 {
   color: var(--c_dark);
   position: relative;
