@@ -124,6 +124,10 @@ ul.whatsnew li + li {
   box-shadow: 0px 0px 0px var(--c_dark);
   transform: translate(0px, 0px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
 }
 .linkbox:hover {
   box-shadow: 0px 4px 0px var(--c_dark);
