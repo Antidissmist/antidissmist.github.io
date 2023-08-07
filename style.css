@@ -16,6 +16,8 @@
 
   --bg_back: url(files/pagebg.png);
   --bg_front: url("/files/pagebg2.png");
+
+  --imgfilter: brightness(0) saturate(100%) invert(28%) sepia(10%) saturate(4124%) hue-rotate(250deg) brightness(93%) contrast(87%);
 }
 
 
@@ -150,6 +152,7 @@ ul.whatsnew li + li {
   margin-left: 7px;
   margin-top: 6px;
   image-rendering: pixelated;
+  filter: var(--imgfilter);
 }
 .smooth img {
   image-rendering: auto;
