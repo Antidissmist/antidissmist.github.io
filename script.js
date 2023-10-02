@@ -339,7 +339,7 @@ const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
 
 themes = {
   normal: 0,
-  spook: 1,
+  spooky: 1,
   chilly: 2,
 };
 theme = themes.normal;
