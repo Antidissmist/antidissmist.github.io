@@ -355,7 +355,7 @@ try {
   var day = Math.floor(diff / oneDay); //number day of the year
 
   //after dec 1, before feb something
-  if (day>335 || day<45) {
+  if (day>=335 || day<45) {
     theme = themes.chilly;
   }
   //between oct 1 and nov 7
