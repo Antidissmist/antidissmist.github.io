@@ -110,6 +110,13 @@ ul.whatsnew li + li {
   
 }
 .linkbox {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  
   color: var(--c_dark);
   background-color: var(--c_bg2);
   border: 2px solid var(--c_dark);
@@ -137,20 +144,19 @@ ul.whatsnew li + li {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .linkbox * {
-  margin: 0;
-  display: block;
+  margin: 0 7px 0 8px;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 .linkbox .imageholder {
   width: 0;
   height: 0;
 }
 .linkbox img {
-  display: block;
-  position: absolute;
   width: 42px;
   height: auto;
-  margin-left: 7px;
-  margin-top: 6px;
+  margin: 0;
   image-rendering: pixelated;
   filter: var(--imgfilter);
 }
@@ -159,17 +165,16 @@ ul.whatsnew li + li {
 }
 .linkbox h3 {
   color: var(--c_dark);
-  position: relative;
-  top: 2px;
-  left: 55px;
+  height: fit-content;
   font-size: 19px;
+  margin: 0;
+  margin-top: 2px;
 }
 .linkbox p {
   color: var(--c_dark);
-  position: relative;
-  top: 2px;
-  left: 55px;
+  height: fit-content;
   font-size: 12px;
+  margin: 0;
 }
 
 
