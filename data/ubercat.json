@@ -1,5 +1,6 @@
 {
-  "version_newest": 1.2,
-  "version_name": "1.2",
+  "version_newest": 1.21,
+  "version_name": "1.2.1",
+  "game_version": [1,2,1],
   "update_link": "https://antidissmist.itch.io/ubercat-overdrive",
 }
