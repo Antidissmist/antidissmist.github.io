@@ -72,6 +72,7 @@ ul.whatsnew {
 }
 ul.whatsnew img {
   max-width: 85%;
+  height: auto;
 }
 li.posttitle {
   font-size: 16pt;
