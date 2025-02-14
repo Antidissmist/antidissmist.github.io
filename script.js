@@ -1,11 +1,163 @@
 
 
 
+
+const mediatype_def = "image";
+const video_type_def = "video/mp4";
+
+const link_ase = `<a href="https://www.aseprite.org/">Aseprite</a>`;
+
+const modal_data = {
+  /*
+  name: {
+    path: "files/thing.png",
+    type: "image", "video",
+    video_type: "video/webm",
+    desc: "a cool game",
+    zoomable: false,
+  }
+  */
+
+  ubercat: {
+    path: "gamedev/ubercat.webm",
+    type: "video",
+    video_type: "video/webm",
+    desc: "ÜBERCAT OVERDRIVE, a crazy simulation/adventure game about Coots the cat causing chaos and calamity. <br>"
+         +`Winner of the <a href="https://itch.io/jam/ludwig-2023">2023 Ludwig Game Jam</a>. <br>`
+         +`Free on <a href="https://antidissmist.itch.io/ubercat-overdrive">itch.io</a> and <a href="https://gx.games/games/ojztkp/ubercat-overdrive/">gx.games</a>.`,
+  },
+  expolaris: {
+    path: "videos/expolaris.mp4",
+    type: "video",
+    desc: `EX POLARIS, an adventure platforming game about a mysterious visit by aliens. Developed in 2 months. <br>Free on <a href="https://antidissmist.itch.io/ex-polaris">Itch.io</a> and <a href="https://gx.games/games/3av88x/ex-polaris/">gx.games</a>.`,
+  },
+  bitbloc: {
+    path: `videos/bitbloc.mp4`,
+    type: `video`,
+    desc: `BIT BLOC alpha 1. An infinite procedurally generated sandbox game, Inspired by Terraria and Minecraft. <br>Free on <a href="https://antidissmist.itch.io/bit-bloc">itch.io</a>`,
+  },
+  loungeware: {
+
+  },
+  microkart: {
+    path: "videos/kart2.mp4",
+    type: "video",
+    desc: `Micro Kart, A multiplayer racing game made in ~1 week. <br>Winner of the gx.games multiplayer game jam for "most played game". <br>Free on <a href="https://gx.games/games/gcr7xk/micro-kart/">gx.games</a>`,
+  },
+  haunter: {
+    path: "videos/haunter.mp4",
+    type: "video",
+    desc: `HAUNTER, a small game about a ghost who has to haunt a house before the landlord returns.<br> Made around halloween for fun.<br> Free on <a href="https://antidissmist.itch.io/haunter">Itch.io</a> and <a href="https://gx.games/games/fjpgq8/haunter/">gx.games</a>`,
+  },
+
+
+
+  art_yellow: {
+    path: `art/yellow.webp`,
+    type: `image`,
+    desc: `(2021) doodle`,
+  },
+  art_voxtower: {
+    path: `art/voxeltower.webp`,
+    type: `image`,
+    desc: `(2020) Made in <a href="https://ephtracy.github.io/">MagicaVoxel</a>`,
+  },
+  art_orangeboxes: {
+    path: `art/orangeboxes.webp`,
+    type: `image`,
+    desc: `(2021) doodle`,
+  },
+  art_spacetower: {
+    path: `art/spacefull.webp`,
+    type: `image`,
+    desc: `(2020) Space Tower Headquarters`,
+    zoomable: true,
+  },
+  art_valleyview: {
+    path: `art/shack.gif`,
+    type: `image`,
+    desc: `(2020) Valley View Shack`,
+  },
+  art_solar: {
+    path: `art/solar.webm`,
+    type: `video`,
+    video_type: `video/webm`,
+    desc: `(2020) Solar Sunset Cruise`,
+  },
+  art_google: {
+    path: `art/coolgoogle.webp`,
+    type: `image`,
+    desc: `(2021) Overdesigned Google logo`,
+  },
+  art_doodle_3_3: {
+    path: `art/doodle_3_3.webp`,
+    type: `image`,
+    desc: `(2022) doodle`,
+  },
+  art_tower: {
+    path: `art/tower.webp`,
+    type: `image`,
+    desc: `(2022) Sci fi tower doodle`,
+  }
+
+};
+
+
+
+
+const elem_modal = document.getElementById("modal_window");
+let elem_modal_content_box;
+let elem_modal_desc;
+let elem_modal_img;
+let elem_modal_video;
+
+function open_modal(type) {
+
+  elem_modal_desc ??= document.getElementById("modal_desc");
+  elem_modal_img ??= document.getElementById("modal_elem_img");
+  elem_modal_video ??= document.getElementById("modal_elem_video");
+  elem_modal_content_box ??= elem_modal_img.parentElement;
+  
+  const data = modal_data[type];
+  const mediatype = data["type"] ?? mediatype_def;
+  const zoomable = data["zoomable"] ?? false;
+
+  //setup image/video element
+  let show_video = false;
+  let show_img = false;
+  if (mediatype == "image") {
+    show_img = true;
+    elem_modal_img.src = data.path;
+  }
+  else if (mediatype == "video") {
+    show_video = true;
+    elem_modal_video.src = data.path;
+    elem_modal_video.type = data.video_type ?? video_type_def;
+  }
+  elem_modal_video.style.setProperty("display",show_video ? "block" : "none");
+  elem_modal_img.style.setProperty("display",show_img ? "block" : "none");
+
+  //set description, allowing for elements
+  elem_modal_desc.innerHTML = data.desc ?? "";
+
+  //open modal
+  if (zoomable) {
+    elem_modal.classList.add("zoomable");
+  }
+  else {
+    elem_modal.classList.remove("zoomable");
+  }
+  elem_modal.classList.add("open");
+  body_lock_scroll();
+}
+
+
+
 function openimg(el) {
   var f = findmodal(el);
   if (f != null) {
     f.classList.toggle("open");
-    document.body.classList.add("noscroll");
+    body_lock_scroll();
   }
   el.classList.add("invis");
   el.parentElement.classList.add("open");
@@ -14,7 +166,7 @@ function openmodalid(eid) {
   el = document.getElementById(eid);
   if (el != null) {
     el.classList.toggle("open");
-    document.body.classList.add("noscroll");
+    body_lock_scroll();
   }
 }
 function open_game() {
@@ -25,7 +177,7 @@ function open_game() {
 function exitmodal(el) {
   el.parentNode.classList.toggle("open");
   el.parentNode.classList.remove("zoomed");
-  document.body.classList.remove("noscroll");
+  body_unlock_scroll();
 
   var opened = el.parentNode.parentNode.querySelector(".invis");
   if (opened != null) { //uh oh
@@ -36,11 +188,27 @@ function exitmodal(el) {
 
   //close_game();
 }
-
-function togglezoom(el) {
-  el.parentNode.classList.toggle("zoomed");
+function modal_exit(modal_parent) {
+  modal_parent.classList.remove("open");
+  modal_parent.classList.remove("zoomed");
+  modal_parent.classList.remove("zoomable");
+  body_unlock_scroll();
 }
 
+
+function body_lock_scroll() {
+
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+
+  document.body.classList.add("noscroll");
+}
+function body_unlock_scroll() {
+
+  document.documentElement.style.removeProperty('--scrollbar-width');
+
+  document.body.classList.remove("noscroll");
+}
 
 
 
@@ -66,17 +234,55 @@ function modalclick(e) {
     exitmodal(this.querySelector(".modal_exit"));
   }
 }
+function modal_bg_click(bg_element) {
+  modal_exit(bg_element.parentElement);
+}
+function modal_content_click(content_box) {
+  if (elem_modal.classList.contains("zoomable")) {
+    elem_modal.classList.toggle("zoomed");
+  }
+}
+
+
+const modal_openers = document.querySelectorAll("[data-modal]");
+modal_openers.forEach(elem=>{
+  let type = elem.getAttribute("data-modal");
+  elem.addEventListener("click",()=>{
+    open_modal(type);
+  });
+});
+
 
 const allmodals = document.querySelectorAll(".modal");
-allmodals.forEach((m) => {
-  m.addEventListener('click', modalclick);
+allmodals.forEach((elem) => {
+
+  //add click to exit
+  //elem.addEventListener('click', modalclick);
+
+  const hide_when_opacity_zero = (event)=>{
+    if (event.propertyName != "opacity") return;
+    let opacity = getComputedStyle(elem).opacity;
+    elem.style.setProperty("visibility", opacity==0 ? "hidden" : "visible" );
+  };
+  elem.addEventListener("transitionend",hide_when_opacity_zero);
+  elem.addEventListener("transitionstart",hide_when_opacity_zero);
+
+});
+
+
+document.querySelectorAll("a").forEach(link=>{
+  link.setAttribute("target","_blank");
 });
 
 
 
-const alltabs = document.querySelectorAll(".bigtab h3");
-const contentsections = document.querySelectorAll(".contentsection");
+let alltabs;
+let contentsections;
 function clicktab(el) {
+
+  alltabs ??= document.querySelectorAll(".bigtab h3");
+  contentsections ??= document.querySelectorAll(".contentsection");
+
   if (!el.classList.contains("selected")) {
     alltabs.forEach(function(tb) {
       tb.classList.toggle("selected");
@@ -337,22 +543,21 @@ const lerp = (x, y, a) => x * (1 - a) + y * a;
 const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
 
 
-themes = {
-  normal: 0,
-  spooky: 1,
-  chilly: 2,
+const themes = {
+  normal: "",
+  spooky: "theme_spooky",
+  chilly: "theme_chilly",
 };
-theme = themes.normal;
-topgreet = 4;
+let theme = themes.normal;
 
 
 //set theme by time of year
 try {
-  var now = new Date();
-  var start = new Date(now.getFullYear(), 0, 0);
-  var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-  var oneDay = 1000 * 60 * 60 * 24;
-  var day = Math.floor(diff / oneDay); //number day of the year
+  let now = new Date();
+  let start = new Date(now.getFullYear(), 0, 0);
+  let diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  let oneDay = 1000 * 60 * 60 * 24;
+  let day = Math.floor(diff / oneDay); //number day of the year
 
   //after dec 1, before feb something
   if (day>=335 || day<45) {
@@ -367,22 +572,9 @@ try {
 catch (e) {
   theme = themes.normal;
 }
-
 set_theme(theme);
 
 
-
-
-
-greeting = document.getElementById("greeting");
-gclicks = 0;
-function greet(add = "") {
-  /*var arr = allthemes[theme].greetings;
-  var num = Math.floor(Math.random() * (Math.min(arr.length, topgreet)));
-  greeting.innerHTML = arr[num] + add;
-  gclicks++
-  topgreet = arr.length;*/
-}
 
 
 

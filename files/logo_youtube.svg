@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="7.6729164mm"
+   height="5.2916665mm"
+   viewBox="0 0 7.6729164 5.2916665"
+   version="1.1"
+   id="svg53"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="logo_youtube.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview55"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="12.443434"
+     inkscape:cx="25.194009"
+     inkscape:cy="24.189463"
+     inkscape:window-width="1284"
+     inkscape:window-height="916"
+     inkscape:window-x="436"
+     inkscape:window-y="133"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g69" />
+  <defs
+     id="defs50" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.77179,-67.096435)">
+    <g
+       id="g69"
+       transform="matrix(0.26458333,0,0,0.26458333,108.77179,67.096435)">
+      <path
+         id="path57"
+         d="M 14.484375 0 C 14.484375 0 5.4209943 -0.00062499231 3.1777344 0.609375 C 1.9292244 0.939375 0.95487737 1.900625 0.59960938 3.140625 C 0.00072938254 5.340625 0 9.9804688 0 9.9804688 C 0 9.9804688 0.00072938254 14.649141 0.59960938 16.869141 C 0.95487737 18.079141 1.9292244 19.060391 3.1777344 19.400391 C 5.4209943 20.000391 14.484375 20 14.484375 20 C 14.484375 20 23.568866 20.000391 25.822266 19.400391 C 27.091066 19.060391 28.045959 18.079141 28.380859 16.869141 C 29.000059 14.649141 29 9.9804688 29 9.9804688 C 29 9.9804688 29.000059 5.340625 28.380859 3.140625 C 28.045959 1.900625 27.091066 0.939375 25.822266 0.609375 C 23.568866 -0.00062499231 14.484375 7.4014868e-17 14.484375 0 z M 11.5 5.75 L 19 10 L 11.5 14.25 L 11.5 5.75 z "
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>
