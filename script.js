@@ -26,6 +26,16 @@ const modal_data = {
          +`Winner of the <a href="https://itch.io/jam/ludwig-2023">2023 Ludwig Game Jam</a>. <br>`
          +`Free on <a href="https://antidissmist.itch.io/ubercat-overdrive">itch.io</a> and <a href="https://gx.games/games/ojztkp/ubercat-overdrive/">gx.games</a>.`,
   },
+  caw: {
+    path: "videos/caw_preview.webm",
+    type: "video",
+    video_type: "video/webm",
+    desc: "Caw Across Time, a puzzle game where you team up with your future self to scale a mysterious clocktower. <br>"
+        +"A game by Antidissmist, Leko, Natanco, TheGreenDS, and Haasio. <br>"
+        +`Featured winner of the <a href="https://itch.io/jam/gmtk-2025">2025 GMTK Game Jam</a>, originally developed in 4 days. <br>`
+        +`Free on <a href="https://antidissmist.itch.io/caw-across-time">itch.io</a>.`
+        ,
+  },
   expolaris: {
     path: "videos/expolaris.mp4",
     type: "video",
@@ -36,9 +46,9 @@ const modal_data = {
     type: `video`,
     desc: `BIT BLOC alpha 1. An infinite procedurally generated sandbox game, Inspired by Terraria and Minecraft. <br>Free on <a href="https://antidissmist.itch.io/bit-bloc">itch.io</a>`,
   },
-  loungeware: {
+  /*loungeware: {
 
-  },
+  },*/
   microkart: {
     path: "videos/kart2.mp4",
     type: "video",
@@ -102,7 +112,30 @@ const modal_data = {
 
 };
 
-
+//cache for modal videos & images
+let media_cache = {};
+for (const [key, value] of Object.entries(modal_data)) {
+  if (!value.path) continue;
+  media_cache[key] = null;
+  fetch(value.path)
+  .then(async (response)=>{
+    if (response.ok) {
+      const blob = await response.blob();
+      const blob_url = URL.createObjectURL(blob);
+      media_cache[key] = blob_url;
+    }
+    else {
+      //
+    }
+  })
+}
+function modal_media_get_src(type) {
+  let cached = media_cache[type];
+  if (!cached) {
+    return modal_data[type].path;
+  }
+  return cached;
+}
 
 
 const elem_modal = document.getElementById("modal_window");
@@ -122,23 +155,36 @@ function open_modal(type) {
   const mediatype = data["type"] ?? mediatype_def;
   const zoomable = data["zoomable"] ?? false;
 
+  //called when media is ready
+  let ready_listener = ()=>{
+    elem_modal.classList.add("open");
+    body_lock_scroll();
+  };
+
   //setup image/video element
   let show_video = false;
   let show_img = false;
   if (mediatype == "image") {
     show_img = true;
-    elem_modal_img.src = data.path;
+    //elem_modal_img.onload = ready_listener;
+    elem_modal_img.src = modal_media_get_src(type);
   }
   else if (mediatype == "video") {
     show_video = true;
-    elem_modal_video.src = data.path;
     elem_modal_video.type = data.video_type ?? video_type_def;
+    //elem_modal_video.oncanplay = ready_listener;
+    elem_modal_video.src = modal_media_get_src(type);
   }
   elem_modal_video.style.setProperty("display",show_video ? "block" : "none");
   elem_modal_img.style.setProperty("display",show_img ? "block" : "none");
 
   //set description, allowing for elements
   elem_modal_desc.innerHTML = data.desc ?? "";
+
+  //set links to open in new tab
+  elem_modal_desc.querySelectorAll("a").forEach((link)=>{
+    link.setAttribute("target","_blank");
+  });
 
   //open modal
   if (zoomable) {
@@ -147,8 +193,7 @@ function open_modal(type) {
   else {
     elem_modal.classList.remove("zoomable");
   }
-  elem_modal.classList.add("open");
-  body_lock_scroll();
+  ready_listener();
 }
 
 
@@ -525,15 +570,6 @@ fpsInterval = 1000 / 60;
 then = Date.now();
 startTime = then;
 */
-
-
-
-//start videos in case they pause
-window.addEventListener('focus', (ev) => {
-  document.querySelectorAll('video').forEach((v) => {
-    v.play();
-  });
-});
 
 
 
