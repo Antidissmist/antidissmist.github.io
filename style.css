@@ -3,6 +3,7 @@
 :root {
   --bg_front: url("files/bg_original_front.webp");
   --bg_back: url("files/bg_original_back.webp");
+  --title_img: url("files/title_name.webp");
   --c_dark: #793a80;
   --c_bg: #242234;
   --c_bg2: #242234;
@@ -34,7 +35,7 @@
   --c_bg: #3f2832;
   --c_bg2: #181425;
   --imgfilter: brightness(0) saturate(100%) invert(16%) sepia(71%) saturate(2689%) hue-rotate(336deg) brightness(94%) contrast(87%);
-  
+  --title_img: url("files/title_name_spooky.webp");
 }
 
 
@@ -553,6 +554,7 @@ ul.whatsnew li + li {
   /*height: 44px;*/
   width: auto;
   filter: drop-shadow(0px 14px 20px rgba(0, 0, 0, 0.3));
+  content: var(--title_img);
 }
 
 
@@ -765,7 +767,16 @@ a img {
   position: relative;
 }
 
-
+.midtext {
+  text-align: center;
+}
+.theme_spooky .midtext {
+  visibility: hidden;
+}
+.theme_spooky .midtext::after {
+  visibility: visible;
+  content: "💀";
+}
 
 
 .tilt:hover {
